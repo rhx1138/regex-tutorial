@@ -14,18 +14,14 @@ Hexadecimal code is a system by which any specific color can be described accura
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
-There are multiple Regex components that we must familiarize ourselves with. They are as follows:
+There are multiple Regex components, they are:
   * { \\ }
-    * This symbol followed by a single character (regex component) will allow a special character to be used as a single character. i.e. (^(https?:\\/\\/) As we can see we are including our forward slashes by prefacing them with our back slashes.)
+  * This symbol followed by a single character will allow a special character to be used as a single character.
     
 ### Anchors
 
@@ -48,15 +44,10 @@ The "or" operator within a regular expression is defined using the `|` element. 
  /^#?(`[a-f0-9]`{6}|`[a-f0-9]{3}`)$/  
 Character classes are components within our regular expression that tells us what type of characters to expect. In our example our character classes are confined within brackets `[]`. For our example we have 2 character classes: `[a-f0-9]` and `[a-f0-9]` which searches for the same values. We will be breaking down what the characters are searching within these character classes. `a-f` searches for letters `a-f` and `0-9` searches for digits `0-9`.
 
-### Flags (Not used in our example)
-
-
-
-### Grouping and Capturing
-
-
 
 ### Bracket Expressions
+
+Anything inside a set of square brackets `[]` represents a range of characters that we want to match. These patterns are known as bracket expressions, but they are also known as a positive character group, because they outline the characters we want to include. We can write these expressions to include all of the characters we want to match. For example, [abc] will look for a string that includes a or b or c, regardless of the length of the string. So all of the following examples would match: "aaa", "bin" "court", "abracadabra", and "bca".
 
 
 
@@ -64,18 +55,6 @@ Character classes are components within our regular expression that tells us wha
  /^#`?`([a-f0-9]{6}|[a-f0-9]{3})$/  
 A greedy match tries to match an element as many times as possible. Whereas, a lazy match tries to match an element as few times as possible. In our example we have `?` which signifies lazy quantifier. This is referred to a lazy quantifier because it causes the regular expression engine to match as few occurances as possible. We can simply turn this lazy match into a greedy one by adding a `?`.
  
- ## Below are Regex Expressions that we did not use in our URL example but are very interesting to know about.
-
-### Boundaries
-
-
-### Back-references
-  
-
-
-### Look-ahead and Look-behind
-
-  
 
 ## Author
 
